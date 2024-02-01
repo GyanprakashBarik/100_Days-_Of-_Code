@@ -1,0 +1,22 @@
+class Solution{
+  public:
+   vector<int> duplicates(long long arr[], int n) {
+        vector<int> ar;
+        sort( arr , arr+n);
+        for(int i=1 ; i<n ; i++){
+            if(arr[i] == arr[i-1]){
+                ar.push_back(arr[i]);
+            }
+            while(arr[i] == arr[i-1]){
+                i++;
+            } 
+        }
+        
+        if(ar.empty()){
+            return {-1};
+        }else{
+            
+            return ar;
+        }
+    }
+};
