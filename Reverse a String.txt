@@ -1,0 +1,12 @@
+class Solution
+{
+    public:
+    string reverseWord(string str)
+    {
+        string rev;
+    for(int i =str.size() ; i>=0 ; i-- ){
+          rev += str[i];
+     }
+     return rev;
+    }
+};
